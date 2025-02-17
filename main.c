@@ -72,15 +72,11 @@ int main()
     }
 
     // clean all spaces
-    char* p1 = buffer;
-    char* p2 = buffer;
-    while (*p2 != '\0') {
+    for (char *p1 = buffer, *p2 = buffer; *p2 != '\0' || (*p1 = '\0'); p2++) {
         if (!isspace(*p2)) {
             *p1++ = *p2;
         }
-        p2++;
     }
-    *p1 = '\0';
 
     input = buffer;
     int result = parse_expression();
