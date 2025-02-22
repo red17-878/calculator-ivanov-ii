@@ -1,2 +1,5 @@
-/calculator.exe
-/.idea
+.idea/
+googletest/
+build/
+
+calculator.exe

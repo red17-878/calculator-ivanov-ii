@@ -6,6 +6,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "aplusb/aplusb.h"
+
 int parse_expression();
 char* input;
 
@@ -55,7 +57,7 @@ int parse_expression()
         input++;
         int term = parse_term();
         if (op == '+') {
-            result += term;
+            result = a_plus_b(result, term);
         } else {
             result -= term;
         }
@@ -63,6 +65,7 @@ int parse_expression()
     return result;
 }
 
+#ifndef GTEST
 int main()
 {
     char buffer[65536];
@@ -83,3 +86,4 @@ int main()
     printf("%d", result);
     return 0;
 }
+#endif
