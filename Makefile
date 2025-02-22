@@ -1,16 +1,16 @@
 # Tools
-CC  := gcc
-CXX := g++
-AR  := ar
+CC  ?= gcc
+CXX ?= g++
+AR  ?= ar
 
 # Google Test root directory
 GTEST_DIR ?= googletest/googletest
 
 # Directories
-SRC_DIR=src
-TESTS_DIR=tests
+SRC_DIR   ?= src
+TESTS_DIR ?= tests
+BUILD_DIR ?= build
 
-BUILD_DIR=build
 APP_BUILD_DIR=$(BUILD_DIR)/app
 TEST_BUILD_DIR=$(BUILD_DIR)/test
 
