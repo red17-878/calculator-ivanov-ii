@@ -7,4 +7,4 @@
 
 int a_plus_b(int a, int b);
 
-#endif //APLUSB_H
+#endif // APLUSB_H
